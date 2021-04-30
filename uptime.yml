@@ -1,6 +1,7 @@
 ---
 - name: Durée de fonctionnement
-  hosts: "{{ machine }}"
+  #hosts: "{{ machine }}"
+  hosts: redhat1
   tasks:
   - name: Obtenir la durée
     shell: uptime | awk ’{print $1}’
