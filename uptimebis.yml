@@ -2,6 +2,7 @@
 - name: Durée de fonctionnement
   #hosts: "{{ machine }}"
   #testt
+  #test2
   hosts: redhat1
   tasks:
   - name: Obtenir la durée
