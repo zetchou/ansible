@@ -1,0 +1,26 @@
+---
+- name: "copie file"
+  host: all
+  become: True
+
+  tasks: 
+    - name: "copy zzz"
+      copy: 
+        src: /tmp/zzz
+        dest: /tmp/yyy
+        owner: root
+        group: root
+        mode: 777
+
+
+
+
+
+# Suppression de l'utilisateur du fichier .k5login
+#- name: Deleting "{{ account }}" from "{{ item }}"
+#  lineinfile:
+#    path: "{{ item }}"
+#    regexp: "^.*{{ account }}@MONEXT.NET.*$"
+#    state: absent
+#  with_items: "{{ k5login_list }}"
+#  when: ansible_system == "Linux"
