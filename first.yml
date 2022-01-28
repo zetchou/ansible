@@ -4,13 +4,13 @@
   become: True
 
   tasks: 
-    - name: "copy zzz"
-      copy: 
-        src: /tmp/zzz
-        dest: /tmp/yyy
-        owner: root
-        group: root
-        mode: 777
+  - name: "copy zzz"
+    copy: 
+    src: /tmp/zzz
+    dest: /tmp/yyy
+    owner: root
+    group: root
+    mode: 777
 
 
 
