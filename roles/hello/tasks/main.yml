@@ -5,3 +5,10 @@
   copy:
     content: hello worldn
     dest: /tmp/testfile.txt
+
+- name: Gather facts on listening ports
+  listen_ports_facts:
+
+- name: List TCP ports
+  ansible.builtin.debug:
+    msg: "{{ ansible_facts.tcp_listen  | map(attribute='port') | sort | list }}"
