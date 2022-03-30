@@ -1,4 +1,4 @@
-- include_vars: "../vars/main.yml"
+#- include_vars: "../vars/main.yml"
 
 - name: This is a hello-world example
   tasks:
