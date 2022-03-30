@@ -1,5 +1,4 @@
 ---
-#- hosts: all
-  roles :
-
+- hosts: all
+  roles:
     - { role: 'roles/hello' }
