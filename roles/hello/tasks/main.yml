@@ -16,9 +16,9 @@
 
 - name: Move openv to openv.old
   command: mv {{ install_dir }} {{ install_dir.save }}
-    args:
-      creates: "{{ install_dir.save }}" 
-      removes: "{{ install_dir }}"
+  args:
+    creates: "{{ install_dir.save }}" 
+    removes: "{{ install_dir }}"
       
 - name: Crée un rep d'installation s'il n'existe pas
   file: 
