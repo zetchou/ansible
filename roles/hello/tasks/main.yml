@@ -1,6 +1,5 @@
 - include_vars: "../vars/main.yml"
 
-
 - name: Create a file called '/tmp/testfile.txt' with the content 'hello world'.
   copy:
     content: hello worldn
