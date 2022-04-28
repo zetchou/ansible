@@ -14,8 +14,8 @@
 
 
 - name: Move openv to openv.old
-  command: mv {{ install_dir }} {{ install_dir.save }}
-  args:
+  command: 
+    cmd: mv {{ install_dir }} {{ install_dir.save }} 
     creates: "{{ install_dir.save }}" 
     removes: "{{ install_dir }}"
       
