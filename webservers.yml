@@ -1,7 +1,7 @@
 ---
 
 - name: Configure webserver with nginx
-  hosts: webservers
+  hosts: centosservers
   become: True
   tasks:
     - name: Ensure nginx is installed
