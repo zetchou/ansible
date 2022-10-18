@@ -1,6 +1,6 @@
 ---
 - name: Configure webserver with Nginx and TLS
-  hosts: webservers
+  hosts: centosservers
   become: true
   gather_facts: false
 
