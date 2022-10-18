@@ -63,11 +63,11 @@
     - name: Restart nginx
       meta: flush_handlers
 
-    - name: "Test it! http://192.168.0.210:80/index.html"
+    - name: "Test it! https://192.168.0.210:8443/index.html"
       delegate_to: localhost
       become: false
       uri:
-        url: 'http://192.168.0.210:80/index.html'
+        url: 'https://192.168.0.210:8443/index.html'
         validate_certs: false
         return_content: true
       register: this
