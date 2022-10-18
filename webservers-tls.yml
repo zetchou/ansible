@@ -50,9 +50,9 @@
 
     - name: Enable configuration
       file:
-      src: /etc/nginx/sites-available/default
-      dest: /etc/nginx/sites-enabled/default
-      state: link
+        src: /etc/nginx/sites-available/default
+        dest: /etc/nginx/sites-enabled/default
+        state: link
 
     - name: Install home page
       template:
