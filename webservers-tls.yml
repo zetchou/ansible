@@ -41,18 +41,18 @@
         - "{{ cert_file }}"
       notify: Restart nginx
 
-    - name: Manage nginx config template
-      template:
-        src: nginx.conf.j2
-        dest: "{{ conf_file }}"
-        mode: '0644'
-      notify: Restart nginx
+#    - name: Manage nginx config template
+#      template:
+#        src: nginx.conf.j2
+#        dest: "{{ conf_file }}"
+#        mode: '0644'
+#      notify: Restart nginx
 
-    - name: Enable configuration
-      file:
-        src: /etc/nginx/sites-available/default
-        dest: /etc/nginx/sites-enabled/default
-        state: link
+#    - name: Enable configuration
+#      file:
+#        src: /etc/nginx/sites-available/default
+#        dest: /etc/nginx/sites-enabled/default
+#        state: link
 
     - name: Install home page
       template:
@@ -67,7 +67,7 @@
       delegate_to: localhost
       become: false
       uri:
-        url: 'https://192.168.0.210:8443/index.html'
+        url: 'https://192.168.0.210:443/index.html'
         validate_certs: false
         return_content: true
       register: this
