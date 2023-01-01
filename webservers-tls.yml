@@ -2,7 +2,7 @@
 - name: Configure webserver with Nginx and TLS
   hosts: centosservers
   become: true
-  gather_facts: false
+  gather_facts: true
 
   vars:
     tls_dir: /etc/nginx/ssl/
